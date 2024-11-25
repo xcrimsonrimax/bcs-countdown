@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import BCSBanner from './images/bcs2024/BCS-2425-banner.jpg';
 import BCSLogo from './images/bcs2024/bcs24-25-logo-sm.png';
-import { zonedTimeToUtc, format } from 'date-fns-tz';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const CountdownTimer = () => {
-  const targetDate = zonedTimeToUtc('2024-12-07T08:00:00', 'Asia/Manila');
+  const targetDate = new Date('2024-12-07T08:00:00');
 
   const countDown = () => {
     const now = new Date();
