@@ -6,7 +6,7 @@ import BCSLogo from './images/bcs2024/bcs24-25-logo-sm.png';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const CountdownTimer = () => {
-  const targetDate = new Date('2024-12-07T08:00:00');
+  const targetDate = zonedTimeToUtc('2024-12-07T08:00:00', 'Asia/Manila');
 
   const countDown = () => {
     const now = new Date();
