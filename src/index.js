@@ -4,6 +4,7 @@ import BCSBanner from './images/bcs2024/BCS-2425-banner.jpg';
 import BCSLogo from './images/bcs2024/bcs24-25-logo-sm.png';
 import Victor from './images/victor.jpg';
 import Hitler from './images/hitler.svg';
+import VictorDz from './images/victor_dz.jpg';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -37,9 +38,13 @@ const CountdownTimer = () => {
   return (
     <div style={styles.container}>
       <img src={BCSBanner} />
-      <h1 style={styles.timer}>
-        {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
-      </h1>
+      <div style={styles.timerContainer}>
+        <img style={styles.sidePic} src={VictorDz} width='200' height='300' />
+        <h1 style={styles.timer}>
+          {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+        </h1>
+        <img style={styles.sidePic} src={VictorDz} width='200' height='300' />
+      </div>
       {timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0 && (
         <h2>Time's up!</h2>
       )}
@@ -73,7 +78,16 @@ const styles = {
   },
   rotate: {
     animation: 'rotate 3s linear infinite'
-  }
+  },
+  sidePic: {
+    display: 'inline-block',
+  },
+  timerContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '20px',
+  },
 };
 
 const rotateKeyframes = `
