@@ -5,6 +5,7 @@ import BCSLogo from './images/bcs2024/bcs24-25-logo-sm.png';
 import Victor from './images/victor.jpg';
 import Hitler from './images/hitler.svg';
 import VictorDz from './images/victor_dz.jpg';
+import HailVictor from './images/hail_victor.gif';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -50,9 +51,11 @@ const CountdownTimer = () => {
       )}
       <img src={BCSLogo} />
       <div>
-        <img src={Victor} width='80' height='80' />
-        <img src={Hitler} style={styles.rotate} width='80' height='80' />
-        <img src={Victor} style={styles.flipped} width='80' height='80' />
+        <img src={HailVictor} width='200' height='200' />
+        <img src={Victor} width='150' height='150' />
+        <img src={Hitler} style={styles.rotate} width='150' height='150' />
+        <img src={Victor} style={styles.flipped} width='150' height='150' />
+        <img src={HailVictor} style={styles.flipped} width='200' height='200' />
       </div>
     </div>
   );
@@ -66,7 +69,6 @@ const styles = {
     justifyContent: 'center',
     height: '100vh',
     fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#f0f0f0',
   },
   timer: {
     fontSize: '3rem',
@@ -87,7 +89,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     gap: '20px',
-  },
+  }
 };
 
 const rotateKeyframes = `
