@@ -6,6 +6,7 @@ import Victor from './images/victor.jpg';
 import Hitler from './images/hitler.svg';
 import VictorDz from './images/victor_dz.jpg';
 import HailVictor from './images/hail_victor.gif';
+import VictorSmile from './images/victor_smile.jpg';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -47,15 +48,19 @@ const CountdownTimer = () => {
         <img style={styles.sidePic} src={VictorDz} width='200' height='300' />
       </div>
       {timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0 && (
-        <h2>Time's up!</h2>
+        <div>
+          <img src={VictorSmile} width='250' height='250' />
+          <h2>May the lucksack be with you!</h2>
+          <img src={VictorSmile} style={styles.flipped} width='250' height='250' />
+        </div>
       )}
       <img src={BCSLogo} />
       <div>
-        <img src={HailVictor} width='200' height='200' />
+        <img src={HailVictor} width='250' height='250' />
         <img src={Victor} width='150' height='150' />
         <img src={Hitler} style={styles.rotate} width='150' height='150' />
         <img src={Victor} style={styles.flipped} width='150' height='150' />
-        <img src={HailVictor} style={styles.flipped} width='200' height='200' />
+        <img src={HailVictor} style={styles.flipped} width='250' height='250' />
       </div>
     </div>
   );
